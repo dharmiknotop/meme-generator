@@ -23,16 +23,16 @@ const EditMeme = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="text-4xl font-mono font-bold my-12">Edit meme </div>
-      <div ref={memeRef} class="border-2 rounded-1xl">
-        <img src={imgURL} width="250px" />
+      <div ref={memeRef} class="h-[354px] border-2 rounded-1xl ">
+        <img src={imgURL} width="350px" />
+        {Array(count)
+          .fill(0)
+          .map((item, index) => (
+            <Text key={index} />
+          ))}
       </div>
 
-      {Array(count)
-        .fill(0)
-        .map((item) => (
-          <Text />
-        ))}
-      <div className="flex mt-12">
+      <div className="flex mt-28 ">
         <button
           class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
           onClick={addText}
